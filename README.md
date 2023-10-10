@@ -16,7 +16,7 @@ E.g. when a users submits new data/params using some sort of backend process and
 
 1. **Clone the repository**:
    
-git clone https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPOSITORY_NAME.git
+git clone https://github.com/Tab-SE/tab_backend_ds_refresh_websocket.git
 
 
 2. **Navigate to the project directory**:
