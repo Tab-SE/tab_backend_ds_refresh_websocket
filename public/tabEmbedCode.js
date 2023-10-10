@@ -17,17 +17,7 @@ await new Promise((resolve, reject) => {
   });
 });
 
-// // Make the Overview dashboard the active sheet
-// const dashboard = await viz.workbook.activateSheetAsync("Overview");
-
-// // Get the worksheet we want to use
-// const worksheet = dashboard.worksheets.find((ws) => ws.name === "SaleMap");
-
-// viz.refreshDataAsync().then(function () {
-//   console.log("Data Source Refreshed");
-//   alert("data source refreshed");
-// });
-
+// Listen for backend-initiated refresh data source request
 const socket = new WebSocket("ws://localhost:3000");
 
 socket.addEventListener("open", (event) => {
