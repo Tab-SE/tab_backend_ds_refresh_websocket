@@ -21,7 +21,7 @@ git clone https://github.com/Tab-SE/tab_backend_ds_refresh_websocket.git
 
 2. **Navigate to the project directory**:
 
-cd YOUR_REPOSITORY_NAME
+cd tab_backend_ds_refresh_websocket
 
 
 3. **Install the necessary dependencies**:
