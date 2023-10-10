@@ -1,0 +1,26 @@
+body {
+    background-color: lightgrey;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1,
+button,
+#refreshMessage,
+div {
+    text-align: center;
+    width: 100%;
+    max-width: 1000px;
+    box-sizing: border-box;
+}
+
+#refreshMessage {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

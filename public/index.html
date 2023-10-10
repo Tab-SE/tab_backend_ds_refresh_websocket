@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Tableau Embed WebSockets Backend Data Source Refresh</title>
+  </head>
+  <body>
+    <h1>Websocket data source refresh</h1>
+    <button id="simulateBackend">Simulate Backend Refresh</button>
+
+    <div id="refreshMessage"></div>
+    <div>
+      <tableau-viz
+        src="https://public.tableau.com/views/Real-time-refresh/timeseries"
+        hide-tabs
+        toolbar="hidden"
+        height="800"
+        width="1000"
+      >
+      </tableau-viz>
+    </div>
+
+    <script type="module" src="./tabEmbedCode.js"></script>
+  </body>
+</html>
