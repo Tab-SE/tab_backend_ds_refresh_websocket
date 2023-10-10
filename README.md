@@ -4,7 +4,7 @@ This project demonstrates how to initiate a Tableau data source refresh from the
 
 E.g. when a users submits new data/params using some sort of backend process and once the underpinning database completes saving this data, the corresponding changes need to be reflected in the frontend.
 
-![Demo Screenshot](./screenshot.png) 
+![Demo Screenshot](./screenshot.gif) 
 <!-- Consider adding a screenshot of your project for a visual representation -->
 
 ## Prerequisites
