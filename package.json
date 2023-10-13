@@ -2,7 +2,7 @@
   "name": "jwtgentableau",
   "description": "Sample Backend with websockets for triggering data source refresh in frontend initiated via back end, Tableau JS API v3",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
+    "uuid": "^9.0.1",
     "ws": "^8.14.2"
   }
 }
