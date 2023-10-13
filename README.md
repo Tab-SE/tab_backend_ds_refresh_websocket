@@ -1,4 +1,4 @@
-# Websocket Tableau Data Source Refresh
+# Websocket Backend- initiated Tableau Data Source Refresh
 
 This project demonstrates how to initiate a Tableau data source refresh from the backend via WebSockets, allowing real-time updates in a frontend application with the Tableau Embedded Dashboard.
 
