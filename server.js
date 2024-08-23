@@ -27,20 +27,32 @@ wss.on("connection", (ws) => {
   console.log(`Client connected with UUID: ${clientUUID}`);
 });
 
-app.get("/trigger-refresh", (req, res) => {
+app.get("/trigger-refresh/:uuid?", (req, res) => {
+  const { uuid } = req.params;
+
   if (BROADCAST_TO_ALL) {
+    // Send refresh command to all connected clients
     wss.clients.forEach((client) => {
       if (client.readyState === WebSocket.OPEN) {
         client.send(JSON.stringify({ refresh: true }));
       }
     });
+  } else if (uuid) {
+    // Send refresh command only to the specified client
+    const client = clientMap.get(uuid);
+    if (client && client.readyState === WebSocket.OPEN) {
+      client.send(JSON.stringify({ refresh: true }));
+    }
+    clientsToRefresh.delete(uuid); // Remove the client UUID from the set
   } else {
+    // Send refresh command to all clients in the set
     clientsToRefresh.forEach((uuid) => {
       const client = clientMap.get(uuid);
       if (client && client.readyState === WebSocket.OPEN) {
         client.send(JSON.stringify({ refresh: true }));
       }
     });
+    clientsToRefresh.clear(); // Clear the set
   }
 
   res.send("Triggered Refresh");

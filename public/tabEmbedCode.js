@@ -37,8 +37,8 @@ document.addEventListener("DOMContentLoaded", async (event) => {
       fetch(`/add-to-refresh-list/${clientUUID}`).then(() => {
         console.log(`Added UUID: ${clientUUID} to the refresh list.`);
 
-        // Trigger the actual refresh on the backend
-        fetch("/trigger-refresh").then(() => {
+        // Trigger the actual refresh on the backend, passing the client UUID
+        fetch(`/trigger-refresh/${clientUUID}`).then(() => {
           console.log("Backend refresh triggered.");
         });
       });
